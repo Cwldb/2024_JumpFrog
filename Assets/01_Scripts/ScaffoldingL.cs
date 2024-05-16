@@ -22,8 +22,6 @@ public class ScaffoldingL : MonoBehaviour
         yield return new WaitForSeconds(2f);
         _rotateOB = false;
         transform.rotation = Quaternion.Euler(0, 0, 0);
-
-
     }
 
 }
