@@ -13,6 +13,8 @@ public class FrogMovement : MonoBehaviour
     [SerializeField]
     private float _jumpPower = 1f;
     [SerializeField]
+    private float _maxJumpPower = 14f;
+    [SerializeField]
     private float _speed = 5f;
 
     private Vector2 _moveDir;
@@ -67,7 +69,7 @@ public class FrogMovement : MonoBehaviour
         if (isGround)
         {
             _anim.SetBool("PlayerJumpReady", true);
-            _jumpPower = Mathf.Clamp(_jumpPower, 0f, 13f);
+            _jumpPower = Mathf.Clamp(_jumpPower, 0f, _maxJumpPower);
             _jumpPower += 11f * Time.deltaTime;
             _speed = 4f;
             if (!isGround) _anim.SetBool("PlayerJump", false);
