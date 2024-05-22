@@ -22,6 +22,10 @@ public class FrogMovement : MonoBehaviour
     public bool isGround;
     public bool isSliGround;
 
+    public bool _jumpReady;
+    public bool _jump;
+    public bool _superJump;
+
     private Rigidbody2D _rigid;
     private Animator _anim;
     private SpriteRenderer _spriteRenderer;
@@ -49,7 +53,7 @@ public class FrogMovement : MonoBehaviour
 
         Move();
         Flip();
-        CheckJump();
+        CheckLanding();
     }
 
     private void OnEnable()
@@ -68,59 +72,61 @@ public class FrogMovement : MonoBehaviour
     {
         if (isGround)
         {
+            _jumpReady = true;
             _anim.SetBool("PlayerJumpReady", true);
             _jumpPower = Mathf.Clamp(_jumpPower, 0f, _maxJumpPower);
             _jumpPower += 11f * Time.deltaTime;
             _speed = 4f;
-            if (!isGround) _anim.SetBool("PlayerJump", false);
         }
 
         else if (!isGround)
         {
             _anim.SetBool("PlayerJumpReady", false);
             _jumpPower = 4f;
-            StartCoroutine(JumpFall());
-            
         }
     }
 
     private void Jump()
     {
-
         if (isGround)
         {
+            _jump = true;
+            _superJump = true;
             _anim.SetBool("PlayerJumpReady", false);
             _rigid.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
             _jumpPower = 4f;
             _speed = 5f;
-            
-            
         }
     }
 
-    private IEnumerator JumpFall()
+    private void CheckLanding()
     {
-        yield return new WaitForSeconds(1.5f);
-        if (!isGround)
-        {
-            _anim.SetBool("PlayerJump", false);
-            print("dd");
-        }
-    }
+        _anim.SetBool("PlayerJump", _superJump ? true : false);
 
-    private void CheckJump()
-    {
-        _anim.SetBool("PlayerJump", isGround ? false : true);
-        if (!isGround)
+        if (isGround && _superJump)
         {
-            StartCoroutine(JumpFall());
+            _superJump = false;
+        }
+
+        else if (!isGround && !_superJump)
+        {
+            _superJump = true;
+        }
+
+        if (isGround && _jumpReady && _jump)
+        {
+            _jumpReady = false;
+            _jump = false;
+        }
+
+        else if (!isGround && _jumpReady && !_jump)
+        {
+            _superJump = false;
         }
     }
 
     private void Move()
     {
-        
-
         _rigid.velocity = new Vector2(_frogInput.moveDir.x * _speed,_rigid.velocity.y);
     }
 

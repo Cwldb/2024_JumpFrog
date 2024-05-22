@@ -561,7 +561,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947294337}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -906,6 +906,9 @@ MonoBehaviour:
   _speed: 6
   isGround: 0
   isSliGround: 0
+  _jumpReady: 0
+  _jump: 0
+  _superJump: 0
 --- !u!95 &1459530926
 Animator:
   serializedVersion: 5
