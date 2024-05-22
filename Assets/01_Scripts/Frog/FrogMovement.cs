@@ -44,7 +44,7 @@ public class FrogMovement : MonoBehaviour
 
     private void Update()
     {
-        isGround = Physics2D.Raycast(transform.position, Vector2.down, _ray, _whatIsGround);
+        isGround = Physics2D.BoxCast(transform.position, new Vector2(0.8f,0.8f), 0, Vector2.down, _ray, _whatIsGround);
 
 
         Move();
@@ -79,6 +79,8 @@ public class FrogMovement : MonoBehaviour
         {
             _anim.SetBool("PlayerJumpReady", false);
             _jumpPower = 4f;
+            StartCoroutine(JumpFall());
+            
         }
     }
 
@@ -91,12 +93,28 @@ public class FrogMovement : MonoBehaviour
             _rigid.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
             _jumpPower = 4f;
             _speed = 5f;
+            
+            
+        }
+    }
+
+    private IEnumerator JumpFall()
+    {
+        yield return new WaitForSeconds(1.5f);
+        if (!isGround)
+        {
+            _anim.SetBool("PlayerJump", false);
+            print("dd");
         }
     }
 
     private void CheckJump()
     {
         _anim.SetBool("PlayerJump", isGround ? false : true);
+        if (!isGround)
+        {
+            StartCoroutine(JumpFall());
+        }
     }
 
     private void Move()
