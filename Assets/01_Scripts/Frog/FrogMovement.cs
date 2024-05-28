@@ -48,7 +48,7 @@ public class FrogMovement : MonoBehaviour
 
     private void Update()
     {
-        isGround = Physics2D.BoxCast(transform.position, new Vector2(0.8f,0.8f), 0, Vector2.down, _ray, _whatIsGround);
+        isGround = Physics2D.BoxCast(transform.position, new Vector2(0.8f,0.6f), 0, Vector2.down, _ray, _whatIsGround);
 
 
         Move();
