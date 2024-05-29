@@ -17,9 +17,9 @@ public class ScaffoldingR : MonoBehaviour
 
     IEnumerator RotateObject()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
         transform.rotation = Quaternion.Euler(0, 0, 90);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         _rotateOB = false;
         transform.rotation = Quaternion.Euler(0, 0, 0);
 
