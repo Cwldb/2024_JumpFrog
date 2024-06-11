@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ScaffoldingL : MonoBehaviour
 {
@@ -18,10 +19,10 @@ public class ScaffoldingL : MonoBehaviour
     IEnumerator RotateObject()
     {
         yield return new WaitForSeconds(1.5f);
-        transform.rotation = Quaternion.Euler(0, 0, -90);
+        transform.DORotate(new Vector3(0f, 0f, -90f), 0.1f);
         yield return new WaitForSeconds(2f);
         _rotateOB = false;
-        transform.rotation = Quaternion.Euler(0, 0, 0);
+        transform.DORotate(new Vector3(0f, 0f, 0f), 0.1f);
     }
 
 }

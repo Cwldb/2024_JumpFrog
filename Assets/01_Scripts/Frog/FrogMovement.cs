@@ -10,14 +10,14 @@ public class FrogMovement : MonoBehaviour
     private LayerMask _whatIsSliGround;
     [SerializeField]
     private float _ray = 1f;
-    [SerializeField]
-    private float _jumpPower = 1f;
-    [SerializeField]
-    private float _maxJumpPower = 14f;
+
     [SerializeField]
     private float _speed = 5f;
 
     private Vector2 _moveDir;
+
+    public float _jumpPower = 1f;
+    public float _maxJumpPower = 14f;
 
     public bool isGround;
     public bool isSliGround;
@@ -74,14 +74,14 @@ public class FrogMovement : MonoBehaviour
             _jumpReady = true;
             _anim.SetBool("PlayerJumpReady", true);
             _jumpPower = Mathf.Clamp(_jumpPower, 0f, _maxJumpPower);
-            _jumpPower += 11f * Time.deltaTime;
+            _jumpPower += 15f * Time.deltaTime;
             _speed = 4f;
         }
 
         else if (!isGround)
         {
             _anim.SetBool("PlayerJumpReady", false);
-            _jumpPower = 4f;
+            _jumpPower = 1f;
         }
     }
 
@@ -93,7 +93,7 @@ public class FrogMovement : MonoBehaviour
             _superJump = true;
             _anim.SetBool("PlayerJumpReady", false);
             _rigid.AddForce(Vector2.up * _jumpPower, ForceMode2D.Impulse);
-            _jumpPower = 4f;
+            _jumpPower = 1f;
             _speed = 5f;
         }
     }
