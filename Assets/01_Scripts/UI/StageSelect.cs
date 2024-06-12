@@ -25,4 +25,9 @@ public class StageSelect : MonoBehaviour
     {
         SceneManager.LoadScene("Stage4");
     }
+
+    public void TurnBackMenu()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
 }

@@ -90,14 +90,14 @@ MonoBehaviour:
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: b75bb507688b34f4ebea5a986fc6cfc0, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 70a92165b9576c040aca552ca27f180a, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 9100000, guid: 2f89ca0f4b0c1c94d9da6e74b871721f, type: 2}
     instantiationMode: 0
   - dependency: {fileID: 7400000, guid: e926a83dc808dd6458eeda482a240094, type: 2}
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: 5f2a108eb023faf43a809979fd3d38f2, type: 3}
     instantiationMode: 1
-  - dependency: {fileID: 2800000, guid: 0381a3b37984bb74e98d2d477717c59b, type: 3}
-    instantiationMode: 0
   - dependency: {fileID: 2800000, guid: b4af694bd79959f4da6fc13fde07567a, type: 3}
     instantiationMode: 0
   templatePipeline: {fileID: 0}
