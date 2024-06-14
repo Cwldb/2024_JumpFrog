@@ -30,6 +30,7 @@ public class FrogMovement : MonoBehaviour
     private Animator _anim;
     private SpriteRenderer _spriteRenderer;
     private FrogInput _frogInput;
+    private CollisionEagle _collisionEagle;
 
     float x;
 
@@ -39,6 +40,7 @@ public class FrogMovement : MonoBehaviour
         _rigid = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _collisionEagle = GetComponent<CollisionEagle>();
     }
 
     private void Start()
@@ -126,7 +128,10 @@ public class FrogMovement : MonoBehaviour
 
     private void Move()
     {
-        _rigid.velocity = new Vector2(_frogInput.moveDir.x * _speed,_rigid.velocity.y);
+        if (!_collisionEagle._isCollision)
+        {
+            _rigid.velocity = new Vector2(_frogInput.moveDir.x * _speed,_rigid.velocity.y);
+        }
     }
 
     private void Flip()

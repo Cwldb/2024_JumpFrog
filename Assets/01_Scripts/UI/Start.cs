@@ -16,4 +16,10 @@ public class Start : MonoBehaviour
     {
         SceneManager.LoadScene("Guide");
     }
+
+    public void Quitgame()
+    {
+        print("게임 종료");
+        Application.Quit();
+    }
 }
