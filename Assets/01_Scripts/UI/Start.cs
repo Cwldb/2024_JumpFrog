@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,6 +11,11 @@ public class Start : MonoBehaviour
     public void SceneChange()
     {
         SceneManager.LoadScene("SelectStage");
+    }
+
+    public void SettingScene()
+    {
+        SceneManager.LoadScene("Setting");
     }
 
     public void GuideScene()

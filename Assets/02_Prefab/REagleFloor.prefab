@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 3199827181915008692}
   m_Layer: 6
   m_Name: REagleFloor
-  m_TagString: Untagged
+  m_TagString: SpawnEagle
   m_Icon: {fileID: -5938655980376293919, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -317,7 +317,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.048716962, y: 0.40744162}
+  - {x: -2.3993225, y: 0.4007155}
   - {x: 2.399703, y: 0.40010273}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
