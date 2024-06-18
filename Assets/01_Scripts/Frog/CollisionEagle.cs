@@ -5,12 +5,17 @@ using UnityEngine;
 public class CollisionEagle : MonoBehaviour
 {
     private Rigidbody2D _rigid;
+    private LEagleSpawn _lEagle;
+    private REagleSpawn _rEagle;
+
     [SerializeField] private float _power = 20f;
 
     public bool _isCollision {  get; set; }
 
     private void Awake()
     {
+        _lEagle = FindAnyObjectByType<LEagleSpawn>();
+        _rEagle = FindAnyObjectByType<REagleSpawn>();
         _rigid = GetComponent<Rigidbody2D>();
     }
 

@@ -7,7 +7,7 @@ public class LEagleSpawn : MonoBehaviour
     [SerializeField] private GameObject _eagleL;
     [SerializeField] private Transform _spawnPoint;
 
-    public bool _isCrash {  get; private set; }
+    public bool _isMark {  get; set; }
 
     private bool _spawnCoolTime = false;
 
@@ -17,6 +17,7 @@ public class LEagleSpawn : MonoBehaviour
         {
             if (!_spawnCoolTime)
             {
+                _isMark = true;
                 Instantiate(_eagleL, _spawnPoint);
                 StartCoroutine(SpawnCool());
             }

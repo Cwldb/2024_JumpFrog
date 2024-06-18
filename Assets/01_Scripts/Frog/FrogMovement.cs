@@ -76,7 +76,7 @@ public class FrogMovement : MonoBehaviour
             _jumpReady = true;
             _anim.SetBool("PlayerJumpReady", true);
             _jumpPower = Mathf.Clamp(_jumpPower, 0f, _maxJumpPower);
-            _jumpPower += 15f * Time.deltaTime;
+            _jumpPower += 17f * Time.deltaTime;
             _speed = 4f;
         }
 

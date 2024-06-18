@@ -7,7 +7,7 @@ public class REagleSpawn : MonoBehaviour
     [SerializeField] private GameObject _eagleR;
     [SerializeField] private Transform _spawnPoint;
 
-    public bool _isCrash { get; private set; }
+    public bool _isMark { get; set; }
 
     private bool _spawnCoolTime = false;
 
@@ -17,6 +17,7 @@ public class REagleSpawn : MonoBehaviour
         {
             if (!_spawnCoolTime)
             {
+                _isMark = true;
                 Instantiate(_eagleR, _spawnPoint);
                 StartCoroutine(SpawnCool());
             }

@@ -12,9 +12,20 @@ public class RMoveEagle : MonoBehaviour
     {
         _rigid = GetComponent<Rigidbody2D>();
     }
+
+    private void Start()
+    {
+        StartCoroutine(DestroyEagle());
+    }
     // Update is called once per frame
     void Update()
     {
         _rigid.velocity = new Vector2(-1f * _speed, 0);
+    }
+
+    IEnumerator DestroyEagle()
+    {
+        yield return new WaitForSeconds(4f);
+        Destroy(gameObject);
     }
 }
