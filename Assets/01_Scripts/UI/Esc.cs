@@ -25,9 +25,4 @@ public class Esc : MonoBehaviour
         _panel.SetActive(false);
         Time.timeScale = 1f;
     }
-
-    public void Setting()
-    {
-        SceneManager.LoadScene("Setting");
-    }
 }

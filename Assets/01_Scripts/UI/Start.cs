@@ -8,14 +8,21 @@ using UnityEngine.UI;
 
 public class Start : MonoBehaviour
 {
+    [SerializeField] private GameObject _soundPanel;
+
     public void SceneChange()
     {
         SceneManager.LoadScene("SelectStage");
     }
 
-    public void SettingScene()
+    public void SettingUI()
     {
-        SceneManager.LoadScene("Setting");
+        _soundPanel.SetActive(true);
+    }
+
+    public void SettingUIFalse()
+    {
+        _soundPanel.SetActive(false);
     }
 
     public void GuideScene()

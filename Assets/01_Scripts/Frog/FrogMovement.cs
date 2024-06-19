@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using UnityEngine;
 
 public class FrogMovement : MonoBehaviour
@@ -10,7 +11,6 @@ public class FrogMovement : MonoBehaviour
     private LayerMask _whatIsSliGround;
     [SerializeField]
     private float _ray = 1f;
-
     [SerializeField]
     private float _speed = 5f;
 
@@ -18,6 +18,7 @@ public class FrogMovement : MonoBehaviour
 
     public float _jumpPower = 1f;
     public float _maxJumpPower = 14f;
+
 
     public bool isGround;
     public bool isSliGround;
@@ -31,8 +32,6 @@ public class FrogMovement : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private FrogInput _frogInput;
     private CollisionEagle _collisionEagle;
-
-    float x;
 
     private void Awake()
     {
