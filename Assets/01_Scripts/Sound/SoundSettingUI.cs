@@ -2,15 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundSettingUI : MonoBehaviour
 {
     public AudioSource bgm;
     public AudioSource jump;
 
-    public void SetMusicVolume(float volume)
+    [SerializeField] private Slider slider;
+    [SerializeField] private SoundSO setting;
+
+    private void Update()
     {
-        bgm.volume = volume;
+        bgm.volume = slider.value;
+        setting.BGMSound = bgm.volume;
+    }
+
+    public void BGM_Slider(float Value)
+    {
+        setting.BGMSound = Value;
+    }
+
+    public void SetMusicVolume(float value)
+    {
+        bgm.volume = value;
     }
 
     public void SetJumpVolume(float volume)

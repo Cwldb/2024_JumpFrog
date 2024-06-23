@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro.EditorUtilities;
 using UnityEngine;
 
 public class FrogMovement : MonoBehaviour
@@ -75,7 +74,7 @@ public class FrogMovement : MonoBehaviour
             _jumpReady = true;
             _anim.SetBool("PlayerJumpReady", true);
             _jumpPower = Mathf.Clamp(_jumpPower, 0f, _maxJumpPower);
-            _jumpPower += 17f * Time.deltaTime;
+            _jumpPower += 18f * Time.deltaTime;
             _speed = 4f;
         }
 

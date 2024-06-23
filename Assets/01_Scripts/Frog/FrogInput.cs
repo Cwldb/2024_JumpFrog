@@ -17,6 +17,12 @@ public class FrogInput : MonoBehaviour
         JumpInput();
     }
 
+    public void MoveInput()
+    {
+        float x = Input.GetAxisRaw("Horizontal");
+        moveDir = new Vector2(x, 0);
+    }
+
     public void JumpInput()
     {
         if (Input.GetKey(KeyCode.Space))
@@ -30,11 +36,6 @@ public class FrogInput : MonoBehaviour
         }
     }
 
-    public void MoveInput()
-    {
-        float x = Input.GetAxisRaw("Horizontal");
-        moveDir = new Vector2(x, 0);
-    }
 
     
 }

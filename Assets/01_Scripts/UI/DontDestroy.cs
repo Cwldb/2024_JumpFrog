@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DontDestroy : MonoBehaviour
 {
-    public bool destroyG = false;
 
     public static DontDestroy instance;
 
@@ -13,13 +12,14 @@ public class DontDestroy : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-        destroyG = true;
 
+        else
+        {
+            Destroy(gameObject);
+
+        }
     }
 
-    private void Update()
-    {
-        
-    }
 }
