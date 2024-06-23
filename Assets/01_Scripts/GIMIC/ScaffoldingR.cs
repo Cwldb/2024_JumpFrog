@@ -18,7 +18,7 @@ public class ScaffoldingR : MonoBehaviour
 
     IEnumerator RotateObject()
     {
-        yield return new WaitForSeconds(0.96f);
+        yield return new WaitForSeconds(0.95f);
         transform.DORotate(new Vector3(0f, 0f, 90f), 0.1f);
         yield return new WaitForSeconds(2f);
         _rotateOB = false;
