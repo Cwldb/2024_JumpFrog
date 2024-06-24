@@ -141,7 +141,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   _ray: 0.6
-  _speed: 6
+  _speed: 7
   _jumpPower: 2
   _maxJumpPower: 16
   isGround: 0
