@@ -35,6 +35,7 @@ public class Esc : MonoBehaviour
     {
         SceneManager.LoadScene("SelectStage");
         Time.timeScale = 1f;
+        EscPanel.instance._isEsc = true;
     }
 
     public void TurnBackScreen()

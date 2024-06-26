@@ -13,6 +13,7 @@ public class ClearStage : MonoBehaviour
         {
             _clearPanel.SetActive(true);
             Time.timeScale = 0;
+            EscPanel.instance._isEsc = false;
         }
     }
 }

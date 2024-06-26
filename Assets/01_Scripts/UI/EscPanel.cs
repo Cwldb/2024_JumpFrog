@@ -5,8 +5,21 @@ using UnityEngine;
 
 public class EscPanel : MonoBehaviour
 {
+
     [SerializeField] private GameObject _panel;
 
+    public static EscPanel instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(instance);
+        }
+    }
     public bool _isEsc;
 
     void Update()
