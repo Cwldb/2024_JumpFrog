@@ -3904,7 +3904,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 98368278}
         m_TargetAssemblyTypeName: Esc, Assembly-CSharp
         m_MethodName: SelectStage
         m_Mode: 1
