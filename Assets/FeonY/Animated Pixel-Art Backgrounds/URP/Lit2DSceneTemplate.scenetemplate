@@ -66,9 +66,7 @@ MonoBehaviour:
     the 2D Renderer in Universal RP.
   preview: {fileID: -3604256930052969394}
   dependencies:
-  - dependency: {fileID: 2800000, guid: b4af694bd79959f4da6fc13fde07567a, type: 3}
-    instantiationMode: 0
-  - dependency: {fileID: 2800000, guid: 5f2a108eb023faf43a809979fd3d38f2, type: 3}
+  - dependency: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 6200000, guid: 24ebabe73526e104e95098d9c6fd3432, type: 2}
     instantiationMode: 0
@@ -76,6 +74,8 @@ MonoBehaviour:
     instantiationMode: 0
   - dependency: {fileID: 11400000, guid: d69fd36abc87ab145bf7f1038cd756d3, type: 2}
     instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: b4af694bd79959f4da6fc13fde07567a, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 1576115265756949326, guid: f664e82d9bc898a49a6f964f971a3004, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 12800000, guid: ca3f9e2e215f4234a925a9db25f0f8c1, type: 3}
@@ -84,9 +84,13 @@ MonoBehaviour:
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: 598c6bf600bab324b9666f63029dbf1a, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: 5f2a108eb023faf43a809979fd3d38f2, type: 3}
+    instantiationMode: 1
   - dependency: {fileID: 2800000, guid: a3794d051fa5c0e4f9161c3e064a2878, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: 2fd6421f253b4ef1a19526541f9ffc0c, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 7400000, guid: dfb5e18e371fa1a4da6aa4dd64d68124, type: 2}
     instantiationMode: 0
@@ -140,6 +144,8 @@ MonoBehaviour:
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: 82b7855014c04db45b210271fc3d3f4c, type: 3}
     instantiationMode: 0
+  - dependency: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+    instantiationMode: 1
   - dependency: {fileID: 3716038605300263841, guid: bf3a05cce3abeae40b446d33329cb921, type: 3}
     instantiationMode: 0
   templatePipeline: {fileID: 0}

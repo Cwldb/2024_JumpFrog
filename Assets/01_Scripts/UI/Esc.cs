@@ -44,4 +44,11 @@ public class Esc : MonoBehaviour
         _panel.SetActive(false);
         Time.timeScale = 1f;
     }
+
+    public void OpenSetting()
+    {
+        _escP._isEsc = true;
+        _panel.SetActive(true);
+        Time.timeScale = 0;
+    }
 }

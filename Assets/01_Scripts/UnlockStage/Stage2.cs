@@ -15,6 +15,10 @@ public class Stage2 : MonoBehaviour
         {
             instance = this;
         }
+        else
+        {
+            Destroy(instance);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

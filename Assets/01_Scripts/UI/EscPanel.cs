@@ -24,24 +24,30 @@ public class EscPanel : MonoBehaviour
 
     void Update()
     {
-        if (!_isEsc)
+        if (!ClearStage.instance.isClear)
         {
-            if(Input.GetKeyDown(KeyCode.Escape))
+            if (!_isEsc)
             {
-                _isEsc = true;
-                _panel.SetActive(true);
-                Time.timeScale = 0;
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    _isEsc = true;
+                    _panel.SetActive(true);
+                    Time.timeScale = 0;
+                }
             }
-        }
 
-        else if (_isEsc)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            else if (_isEsc)
             {
-                _isEsc = false;
-                _panel.SetActive(false);
-                Time.timeScale = 1;
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    _isEsc = false;
+                    _panel.SetActive(false);
+                    Time.timeScale = 1;
+                }
             }
         }
+        
     }
+
+    
 }
